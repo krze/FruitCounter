@@ -12,6 +12,10 @@ final class LogCoordinator: ObservableObject {
     
     @Published private(set) var currentLogBook: LogBook
     
+    init() {
+        self.currentLogBook = LogBook(userName: "", logs: [], focusedFruit: .watermelon)
+    }
+    
     init(logBook: LogBook) {
         currentLogBook = logBook
     }

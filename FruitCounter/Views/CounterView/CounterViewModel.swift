@@ -8,11 +8,17 @@
 
 import SwiftUI
 
-struct CounterViewModel {
+final class CounterViewModel {
     
-    let fruit: Fruit
-    let count: Int
-    let font: Font
+    var fruit: Fruit
+    var count: Int
+    var font: Font
+    
+    init(fruit: Fruit, count: Int, font: Font) {
+        self.fruit = fruit
+        self.count = count
+        self.font = font
+    }
     
     static let `default` = CounterViewModel(fruit: .watermelon, count: 0, font: .appBoldFont(size: 69.0))
 
