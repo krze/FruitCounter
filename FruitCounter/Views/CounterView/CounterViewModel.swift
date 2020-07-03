@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-final class CounterViewModel {
+final class CounterViewModel: ObservableObject, Identifiable {
     
-    var fruit: Fruit
-    var count: Int
-    var font: Font
+    @Published var fruit: Fruit
+    @Published var count: Int
+    let font: Font
     
     init(fruit: Fruit, count: Int, font: Font) {
         self.fruit = fruit
