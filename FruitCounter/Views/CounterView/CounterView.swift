@@ -16,23 +16,24 @@ struct CounterView: View {
     // MARK: - Body
 
     var body: some View {
-        VStack(content: {
+        VStack {
             // title
             Text(viewModel.fruit.emoji).font(viewModel.font)
             // count
             Text("\(viewModel.count)").font(viewModel.font)
             HStack {
-                CounterButtonFactory.button(with: .decrement, action: self.viewModel.decrement)
-                CounterButtonFactory.button(with: .increment, action: self.viewModel.increment)
+                CounterButtonFactory.button(with: .decrement, action: viewModel.decrement)
+                CounterButtonFactory.button(with: .increment, action: viewModel.increment)
             }
-            })
+        }
     }
     
 }
 
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = CounterViewModel(logCoordinator: LogCoordinator(), font: .appBoldFont(size: 69.0))
+        let testLogbook = LogBook(userName: "Default Username", logs: [], focusedFruit: .watermelon)
+        let viewModel = CounterViewModel(logCoordinator: LogCoordinator(logBook: testLogbook), font: .appBoldFont(size: 69.0))
         let view = CounterView(viewModel: viewModel)
         return view
     }

@@ -7,17 +7,28 @@
 //
 
 import Combine
+import Foundation
 
 final class LogCoordinator: ObservableObject {
     
     @Published private(set) var currentLogBook: LogBook
     
-    init() {
-        self.currentLogBook = LogBook(userName: "Default Username", logs: [], focusedFruit: .watermelon)
-    }
+    private var dataCoordinator: DataCoordinator
     
     init(logBook: LogBook) {
         currentLogBook = logBook
+        self.dataCoordinator = DataCoordinator()
+        self.dataCoordinator.fetchLatest(userName: logBook.userName, loadSubscriber: LoadSubscriber { encodedData in
+            do {
+                let data = try JSONSerialization.data(withJSONObject: encodedData)
+                self.currentLogBook = try JSONDecoder().decode(LogBook.self, from: data)
+            }
+            catch let error {
+                print(error)
+            }
+        })
+
+        $currentLogBook.subscribe(dataCoordinator)
     }
     
     /// Changes focus to the fruit specified
