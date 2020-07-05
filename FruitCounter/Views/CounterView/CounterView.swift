@@ -22,12 +22,8 @@ struct CounterView: View {
             // count
             Text("\(viewModel.count)").font(viewModel.font)
             HStack {
-                CounterButtonFactory.button(with: .decrement, action: {
-                    self.viewModel.count = self.viewModel.count - 1
-                })
-                CounterButtonFactory.button(with: .increment, action: {
-                    self.viewModel.count = self.viewModel.count + 1
-                })
+                CounterButtonFactory.button(with: .decrement, action: self.viewModel.decrement)
+                CounterButtonFactory.button(with: .increment, action: self.viewModel.increment)
             }
             })
     }

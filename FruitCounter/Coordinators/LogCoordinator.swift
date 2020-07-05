@@ -35,6 +35,19 @@ final class LogCoordinator: ObservableObject {
         currentLogBook = currentLogBook.add(log)
     }
     
+    func removeMostRecent(_ fruit: Fruit) {
+        guard let newest = currentLogBook
+            .logs
+            .filter({ $0.fruit == fruit })
+            .sorted(by: { $0.dateConsumed.compare($1.dateConsumed) == .orderedDescending })
+            .first
+            else {
+                return
+        }
+        
+        currentLogBook = currentLogBook.remove(newest)
+    }
+    
     func remove(_ log: FruitLog) {
         currentLogBook = currentLogBook.remove(log)
     }
