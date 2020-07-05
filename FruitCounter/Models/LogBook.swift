@@ -14,6 +14,10 @@ struct LogBook: Codable {
     let logs: [FruitLog]
     let focusedFruit: Fruit
     
+    var currentlyFocusedLogs: [FruitLog] {
+        return logs.filter { $0.fruit == focusedFruit }
+    }
+    
     /// Generates a new LogBook with the added log
     func add(_ newLog: FruitLog) -> LogBook {
         var mutableLogs = logs
@@ -23,9 +27,9 @@ struct LogBook: Codable {
     }
     
     /// Generates a new LogBook with the removed log
-    func remove(_ log: FruitLog) -> LogBook {
+    func remove(_ log: FruitLog) throws -> LogBook {
         var mutableLogs = logs
-        guard let index = mutableLogs.firstIndex(of: log) else { return self }
+        guard let index = mutableLogs.firstIndex(of: log) else { throw LogError.logNotFound(log) }
         
         mutableLogs.remove(at: index)
         
@@ -40,6 +44,10 @@ struct LogBook: Codable {
     /// Changes the current username
     func change(userName: String) -> LogBook {
         return LogBook(userName: userName, logs: logs, focusedFruit: focusedFruit)
+    }
+    
+    enum LogError: Error {
+        case noRecordsForFruit(Fruit), logNotFound(FruitLog)
     }
     
 }

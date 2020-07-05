@@ -13,7 +13,7 @@ final class LogCoordinator: ObservableObject {
     @Published private(set) var currentLogBook: LogBook
     
     init() {
-        self.currentLogBook = LogBook(userName: "", logs: [], focusedFruit: .watermelon)
+        self.currentLogBook = LogBook(userName: "Default Username", logs: [], focusedFruit: .watermelon)
     }
     
     init(logBook: LogBook) {
@@ -30,30 +30,47 @@ final class LogCoordinator: ObservableObject {
         currentLogBook = currentLogBook.change(userName: username)
     }
     
-    ///
+    /// Adds the given log to the logbook
     func add(_ log: FruitLog) {
         currentLogBook = currentLogBook.add(log)
     }
     
-    func removeMostRecent(_ fruit: Fruit) {
+    /// Removes the most recent log for the specified fruit
+    func removeMostRecent(_ fruit: Fruit) throws {
         guard let newest = currentLogBook
             .logs
             .filter({ $0.fruit == fruit })
             .sorted(by: { $0.dateConsumed.compare($1.dateConsumed) == .orderedDescending })
             .first
             else {
-                return
+                throw LogBook.LogError.noRecordsForFruit(fruit)
         }
         
-        currentLogBook = currentLogBook.remove(newest)
+        do {
+            currentLogBook = try currentLogBook.remove(newest)
+        }
+        catch let error {
+            print(error)
+        }
     }
     
     func remove(_ log: FruitLog) {
-        currentLogBook = currentLogBook.remove(log)
+        do {
+            currentLogBook = try currentLogBook.remove(log)
+        }
+        catch let error {
+            print(error)
+        }
     }
     
     func replace(oldLog: FruitLog, with newLog: FruitLog) {
-        currentLogBook = currentLogBook.remove(oldLog).add(newLog)
+        do {
+            currentLogBook = try currentLogBook.remove(oldLog).add(newLog)
+        }
+        catch let error {
+            print(error)
+            currentLogBook = currentLogBook.add(newLog)
+        }
     }
     
 }

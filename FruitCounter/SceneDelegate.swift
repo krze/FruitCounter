@@ -21,7 +21,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
-        let view = CounterView(viewModel: .default)
+        let focusedFruit = Fruit(name: "Watermelon", emoji: "🍉")
+        let logBook = LogBook(userName: "Deault Username", logs: [], focusedFruit: focusedFruit)
+        let logCoordinator = LogCoordinator(logBook: logBook)
+        let viewModel = CounterViewModel(logCoordinator: logCoordinator, font: .appBoldFont(size: 69.0))
+        let view = CounterView(viewModel: viewModel)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

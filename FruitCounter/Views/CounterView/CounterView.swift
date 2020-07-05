@@ -32,8 +32,7 @@ struct CounterView: View {
 
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        let testFruit = Fruit(name: "Eggplant", emoji: "🍆")
-        let viewModel = CounterViewModel(fruit: testFruit, count: 69, font: .appBoldFont(size: 69.0))
+        let viewModel = CounterViewModel(logCoordinator: LogCoordinator(), font: .appBoldFont(size: 69.0))
         let view = CounterView(viewModel: viewModel)
         return view
     }

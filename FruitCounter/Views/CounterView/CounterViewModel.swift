@@ -6,6 +6,7 @@
 //  Copyright © 2020 Ken Krzeminski. All rights reserved.
 //
 
+import Combine
 import SwiftUI
 
 final class CounterViewModel: ObservableObject, Identifiable {
@@ -16,27 +17,42 @@ final class CounterViewModel: ObservableObject, Identifiable {
     
     let font: Font
     
-    init(fruit: Fruit, count: Int, font: Font) {
-        self.fruit = fruit
-        self.count = count
+    private var disposables = Set<AnyCancellable>()
+    
+    init(logCoordinator: LogCoordinator, font: Font) {
+        self.fruit = logCoordinator.currentLogBook.focusedFruit
+        self.count = logCoordinator.currentLogBook.currentlyFocusedLogs.count
+        self.logCoordinator = logCoordinator
         self.font = font
         
-        let newBook = LogBook(userName: "", logs: [], focusedFruit: fruit)
-        self.logCoordinator = LogCoordinator(logBook: newBook)
-        
-        // Next: Observe changes to update self
+        disposables.insert(
+            logCoordinator.$currentLogBook
+            .map { logBook -> (fruit: Fruit, count: Int) in
+                (logBook.focusedFruit, logBook.currentlyFocusedLogs.count)
+            }
+            .receive(on: DispatchQueue.main)
+            .sink { (fruit: Fruit, count: Int) in
+            self.fruit = fruit
+            self.count = count
+            }
+        )
     }
     
-    static let `default` = CounterViewModel(fruit: .watermelon, count: 0, font: .appBoldFont(size: 69.0))
+    deinit {
+        disposables.forEach { $0.cancel() }
+    }
     
     func increment() {
-        count += 1
         logCoordinator.add(FruitLog(fruit: fruit, dateConsumed: Date()))
     }
     
     func decrement() {
-        count -= 1
-        logCoordinator.removeMostRecent(fruit)
+        do {
+            try logCoordinator.removeMostRecent(fruit)
+        }
+        catch let error {
+            print(error)
+        }
     }
 
 }
