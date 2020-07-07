@@ -50,4 +50,6 @@ struct LogBook: Codable {
         case noRecordsForFruit(Fruit), logNotFound(FruitLog)
     }
     
+    static let `default` = LogBook(userName: "", logs: [], focusedFruit: .watermelon)
+    
 }

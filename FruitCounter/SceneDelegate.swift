@@ -12,7 +12,7 @@ import SwiftUI
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    private let usernameKey = "userName"
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -21,19 +21,19 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
-        let focusedFruit = Fruit(name: "Watermelon", emoji: "🍉")
-        let logBook = LogBook(userName: "Deault Username", logs: [], focusedFruit: focusedFruit)
-        let logCoordinator = LogCoordinator(logBook: logBook)
-        let viewModel = CounterViewModel(logCoordinator: logCoordinator, font: .appBoldFont(size: 69.0))
-        let view = CounterView(viewModel: viewModel)
-
-        // Use a UIHostingController as window root view controller.
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: view)
-            self.window = window
-            window.makeKeyAndVisible()
-        }
+        let dataCoordinator = DataCoordinator()
+        
+        dataCoordinator.fetchLatest(loadSubscriber: DataLoadSubscriber { [weak self] result in
+            switch result {
+            case .success(let data):
+                if let logBook = try? JSONDecoder().decode(LogBook.self, from: data) {
+                    self?.launch(with: logBook, dataCoordinator: dataCoordinator, scene: scene)
+                }
+            case .failure(let error):
+                print(error)
+                self?.launch(with: .default, dataCoordinator: dataCoordinator, scene: scene)
+            }
+        })
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -64,6 +64,19 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    private func launch(with logBook: LogBook, dataCoordinator: DataCoordinator, scene: UIScene) {
+        let logCoordinator = LogCoordinator(logBook: logBook, dataCoordinator: dataCoordinator)
+        let viewModel = CounterViewModel(logCoordinator: logCoordinator, font: .appBoldFont(size: 69.0))
+        let view = CounterView(viewModel: viewModel)
+        
+        // Use a UIHostingController as window root view controller.
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: view)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    }
 
 }
 

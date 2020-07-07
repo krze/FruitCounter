@@ -33,7 +33,7 @@ struct CounterView: View {
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
         let testLogbook = LogBook(userName: "Default Username", logs: [], focusedFruit: .watermelon)
-        let viewModel = CounterViewModel(logCoordinator: LogCoordinator(logBook: testLogbook), font: .appBoldFont(size: 69.0))
+        let viewModel = CounterViewModel(logCoordinator: LogCoordinator(logBook: testLogbook, dataCoordinator: DataCoordinator()), font: .appBoldFont(size: 69.0))
         let view = CounterView(viewModel: viewModel)
         return view
     }

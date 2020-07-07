@@ -23,6 +23,7 @@
 		9DECFBEF24AF8DC500FFEE87 /* Font+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBEE24AF8DC500FFEE87 /* Font+AppStyle.swift */; };
 		9DECFBF124AF944800FFEE87 /* LogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF024AF944800FFEE87 /* LogCoordinator.swift */; };
 		9DECFBF424AF947200FFEE87 /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF324AF947200FFEE87 /* DataCoordinator.swift */; };
+		9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9DECFBEE24AF8DC500FFEE87 /* Font+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+AppStyle.swift"; sourceTree = "<group>"; };
 		9DECFBF024AF944800FFEE87 /* LogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCoordinator.swift; sourceTree = "<group>"; };
 		9DECFBF324AF947200FFEE87 /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
+		9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				9DECFBF024AF944800FFEE87 /* LogCoordinator.swift */,
 				9DECFBF324AF947200FFEE87 /* DataCoordinator.swift */,
+				9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				9DECFBF124AF944800FFEE87 /* LogCoordinator.swift in Sources */,
 				9DECFBEF24AF8DC500FFEE87 /* Font+AppStyle.swift in Sources */,
 				9DECFBE624AF7D3300FFEE87 /* Rating.swift in Sources */,
+				9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */,
 				9DECFBF424AF947200FFEE87 /* DataCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

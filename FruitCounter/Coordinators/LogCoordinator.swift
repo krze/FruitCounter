@@ -15,18 +15,9 @@ final class LogCoordinator: ObservableObject {
     
     private var dataCoordinator: DataCoordinator
     
-    init(logBook: LogBook) {
+    init(logBook: LogBook, dataCoordinator: DataCoordinator) {
         currentLogBook = logBook
-        self.dataCoordinator = DataCoordinator()
-        self.dataCoordinator.fetchLatest(userName: logBook.userName, loadSubscriber: LoadSubscriber { encodedData in
-            do {
-                let data = try JSONSerialization.data(withJSONObject: encodedData)
-                self.currentLogBook = try JSONDecoder().decode(LogBook.self, from: data)
-            }
-            catch let error {
-                print(error)
-            }
-        })
+        self.dataCoordinator = dataCoordinator
 
         $currentLogBook.subscribe(dataCoordinator)
     }

@@ -9,80 +9,45 @@
 import Foundation
 import Combine
 
-final class LoadSubscriber: Subscriber {
-    typealias Input = UInt8
-    typealias Failure = Never
-    
-    var completion: (UInt8) -> Void
-    
-    init(onLoad: @escaping (UInt8) -> Void){
-        self.completion = onLoad
-    }
-    
-    func receive(subscription: Subscription) {
-        subscription.request(.max(1))
-    }
-    
-    func receive(_ input: Input) -> Subscribers.Demand {
-        completion(input)
-        return .none
-    }
-    
-    func receive(completion: Subscribers.Completion<Never>) { }
-
-}
 
 final class DataCoordinator: Subscriber {
+    
+    private struct Constants {
+       static let userDataJSON = "user_data.json"
+    }
     
     typealias Input = LogBook
     typealias Failure = Never
     
     let queue = DispatchQueue(label: "io.write")
     
-    private var previousUsername: String?
     private var loadCancellable: Cancellable?
     
     /// Fetches the latest data from disk
     /// - Parameters:
-    ///   - userName: Optional username, if any.
     ///   - loadSubscriber: LoadSubscriber that responds to the encoded data
-    func fetchLatest(userName: String?, loadSubscriber: LoadSubscriber) {
+    func fetchLatest(loadSubscriber: DataLoadSubscriber) {
         guard let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            print("Can't access documents.")
+            loadSubscriber.receive(completion: .failure(CocoaError(.fileReadNoPermission)))
             return
         }
         
-        queue.async {
-            if let userName = userName {
-                let filename = "\(userName).json"
-                do {
-                    try Data(contentsOf: documents.appendingPathComponent(filename))
-                        .publisher
-                        .receive(on: DispatchQueue.main)
-                        .subscribe(loadSubscriber)
+        let fileURL = documents.appendingPathComponent(Constants.userDataJSON)
+        
+        if FileManager.default.fileExists(atPath: fileURL.path) {
+            DataLoadPublisher(fileURL: fileURL, queue: queue).receive(subscriber: loadSubscriber)
+        }
+        else {
+            do {
+                if let firstFile = try FileManager().contentsOfDirectory(at: documents, includingPropertiesForKeys: nil, options: []).first {
+                    DataLoadPublisher(fileURL: firstFile, queue: queue).receive(subscriber: loadSubscriber)
                 }
-                catch let error {
-                    print(error)
+                else {
+                    throw CocoaError(.fileReadUnknown)
                 }
+            } catch let error {
+                loadSubscriber.receive(completion: .failure(error))
             }
-            else {
-                guard let path = try? FileManager().contentsOfDirectory(at: documents, includingPropertiesForKeys: nil, options: []).first else {
-                    return
-                }
-
-                do {
-                    try Data(contentsOf: path)
-                        .publisher
-                        .receive(on: DispatchQueue.main)
-                        .subscribe(loadSubscriber)
-                }
-                catch let error {
-                    print(error)
-                }
-            }
-
-
-            
         }
     }
     
@@ -99,13 +64,8 @@ final class DataCoordinator: Subscriber {
             return .none
         }
         
-        if previousUsername != nil && previousUsername != input.userName,
-            let previousUsername = previousUsername {
-            delete(userName: previousUsername, directory: documents)
-        }
-        
         if let encodedData = try? JSONEncoder().encode(input) {
-            save(data: encodedData, userName: input.userName, directory: documents)
+            save(data: encodedData, fileName: Constants.userDataJSON, directory: documents)
         }
         
         return .none
@@ -115,12 +75,10 @@ final class DataCoordinator: Subscriber {
         print("Received completion: \(completion)")
     }
     
-    private func save(data: Data, userName: String, directory: URL) {
+    private func save(data: Data, fileName: String, directory: URL) {
         queue.sync {
-            let filename = "\(userName).json"
-
              do {
-                 try data.write(to: directory.appendingPathComponent(filename))
+                 try data.write(to: directory.appendingPathComponent(fileName))
              }
              catch let error {
                  print("Save failed")
@@ -128,16 +86,13 @@ final class DataCoordinator: Subscriber {
                  return
              }
             
-            previousUsername = userName
         }
     }
     
-    private func delete(userName: String, directory: URL) {
+    private func delete(directory: URL, fileName: String) {
         queue.sync {
-            let filename = "\(userName).json"
-            
             do {
-                try FileManager().removeItem(at: directory.appendingPathComponent(filename))
+                try FileManager().removeItem(at: directory.appendingPathComponent(fileName))
             }
             catch let error {
                 print(error)
