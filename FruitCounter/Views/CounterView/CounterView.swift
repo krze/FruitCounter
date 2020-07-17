@@ -17,14 +17,11 @@ struct CounterView: View {
 
     var body: some View {
         VStack {
-            // title
-            Text(viewModel.fruit.emoji).font(viewModel.font)
-            // count
-            Text("\(viewModel.count)").font(viewModel.font)
-            HStack {
-                CounterButtonFactory.button(with: .decrement, action: viewModel.decrement)
-                CounterButtonFactory.button(with: .increment, action: viewModel.increment)
-            }
+            EmojiCounterView(emoji: viewModel.fruit.emoji, count: viewModel.count, font: viewModel.font)
+            HorizontalCounterButtonView(leftButtonModel: .decrement,
+                                        leftButtonAction: viewModel.decrement,
+                                        rightButtonModel: .increment,
+                                        rightButtonAction: viewModel.increment)
         }
     }
     

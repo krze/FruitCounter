@@ -24,6 +24,8 @@
 		9DECFBF124AF944800FFEE87 /* LogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF024AF944800FFEE87 /* LogCoordinator.swift */; };
 		9DECFBF424AF947200FFEE87 /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF324AF947200FFEE87 /* DataCoordinator.swift */; };
 		9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */; };
+		9DECFBFA24C22DA100FFEE87 /* EmojiCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */; };
+		9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		9DECFBF024AF944800FFEE87 /* LogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCoordinator.swift; sourceTree = "<group>"; };
 		9DECFBF324AF947200FFEE87 /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadPublisher.swift; sourceTree = "<group>"; };
+		9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCounterView.swift; sourceTree = "<group>"; };
+		9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCounterButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				9DECFBED24AF8D9F00FFEE87 /* CounterView */,
-				9DECFBE924AF89C500FFEE87 /* CounterButtonFactory.swift */,
-				9DECFBEB24AF8A0600FFEE87 /* CounterButtonViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,7 +126,11 @@
 		9DECFBED24AF8D9F00FFEE87 /* CounterView */ = {
 			isa = PBXGroup;
 			children = (
+				9DECFBE924AF89C500FFEE87 /* CounterButtonFactory.swift */,
+				9DECFBEB24AF8A0600FFEE87 /* CounterButtonViewModel.swift */,
 				9DECFBDB24AF790900FFEE87 /* CounterView.swift */,
+				9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */,
+				9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */,
 				9DECFBE724AF817800FFEE87 /* CounterViewModel.swift */,
 			);
 			path = CounterView;
@@ -214,11 +220,13 @@
 				9DECFBE424AF7C6600FFEE87 /* Fruit.swift in Sources */,
 				9DECFBE224AF7BBC00FFEE87 /* LogBook.swift in Sources */,
 				9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */,
+				9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */,
 				9DECFBDF24AF7B7100FFEE87 /* FruitLog.swift in Sources */,
 				9DECFBCA24AF768900FFEE87 /* SceneDelegate.swift in Sources */,
 				9DECFBEC24AF8A0600FFEE87 /* CounterButtonViewModel.swift in Sources */,
 				9DECFBE824AF817800FFEE87 /* CounterViewModel.swift in Sources */,
 				9DECFBDC24AF790900FFEE87 /* CounterView.swift in Sources */,
+				9DECFBFA24C22DA100FFEE87 /* EmojiCounterView.swift in Sources */,
 				9DECFBEA24AF89C500FFEE87 /* CounterButtonFactory.swift in Sources */,
 				9DECFBF124AF944800FFEE87 /* LogCoordinator.swift in Sources */,
 				9DECFBEF24AF8DC500FFEE87 /* Font+AppStyle.swift in Sources */,
