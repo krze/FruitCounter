@@ -26,6 +26,9 @@
 		9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */; };
 		9DECFBFA24C22DA100FFEE87 /* EmojiCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */; };
 		9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */; };
+		9DECFBFE24C2302E00FFEE87 /* FruitLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */; };
+		9DECFC0124C2305E00FFEE87 /* FruitLogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */; };
+		9DECFC0324C230F800FFEE87 /* FruitLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFC0224C230F800FFEE87 /* FruitLogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadPublisher.swift; sourceTree = "<group>"; };
 		9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCounterView.swift; sourceTree = "<group>"; };
 		9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCounterButtonView.swift; sourceTree = "<group>"; };
+		9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListView.swift; sourceTree = "<group>"; };
+		9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListViewModel.swift; sourceTree = "<group>"; };
+		9DECFC0224C230F800FFEE87 /* FruitLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		9DECFBDD24AF7B4300FFEE87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9DECFBFF24C2303500FFEE87 /* ListView */,
 				9DECFBED24AF8D9F00FFEE87 /* CounterView */,
 			);
 			path = Views;
@@ -126,12 +133,12 @@
 		9DECFBED24AF8D9F00FFEE87 /* CounterView */ = {
 			isa = PBXGroup;
 			children = (
+				9DECFBE724AF817800FFEE87 /* CounterViewModel.swift */,
 				9DECFBE924AF89C500FFEE87 /* CounterButtonFactory.swift */,
 				9DECFBEB24AF8A0600FFEE87 /* CounterButtonViewModel.swift */,
 				9DECFBDB24AF790900FFEE87 /* CounterView.swift */,
 				9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */,
 				9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */,
-				9DECFBE724AF817800FFEE87 /* CounterViewModel.swift */,
 			);
 			path = CounterView;
 			sourceTree = "<group>";
@@ -144,6 +151,16 @@
 				9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9DECFBFF24C2303500FFEE87 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */,
+				9DECFC0224C230F800FFEE87 /* FruitLogView.swift */,
+				9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */,
+			);
+			path = ListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,8 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DECFC0324C230F800FFEE87 /* FruitLogView.swift in Sources */,
 				9DECFBE424AF7C6600FFEE87 /* Fruit.swift in Sources */,
 				9DECFBE224AF7BBC00FFEE87 /* LogBook.swift in Sources */,
+				9DECFC0124C2305E00FFEE87 /* FruitLogListViewModel.swift in Sources */,
+				9DECFBFE24C2302E00FFEE87 /* FruitLogListView.swift in Sources */,
 				9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */,
 				9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */,
 				9DECFBDF24AF7B7100FFEE87 /* FruitLog.swift in Sources */,

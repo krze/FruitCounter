@@ -12,4 +12,11 @@ enum Rating: Int, Codable {
     
     case unrated, thumbsDown, thumbsUp
     
+    var emoji: String {
+        switch self {
+        case .thumbsUp: return "👍"
+        case .thumbsDown: return "👎"
+        case .unrated: return "❓"
+        }
+    }
 }
