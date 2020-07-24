@@ -14,7 +14,9 @@ struct MainView: View {
     @State private var bottomViewHeight: CGFloat = .zero
     @State private var topViewHeight: CGFloat = .infinity
     
+    // How far the user drags before the view will snap
     private let snapTolerance: CGFloat = 50.0
+    
     let maxBottomViewRatio: CGFloat
     var maxTopViewRatio: CGFloat {
         return 1 - maxBottomViewRatio

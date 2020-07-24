@@ -30,7 +30,6 @@
 		9DECFBFE24C2302E00FFEE87 /* FruitLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */; };
 		9DECFC0124C2305E00FFEE87 /* FruitLogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */; };
 		9DECFC0324C230F800FFEE87 /* FruitLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFC0224C230F800FFEE87 /* FruitLogView.swift */; };
-		9DECFC0524C255D100FFEE87 /* SnappingTwoPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFC0424C255D100FFEE87 /* SnappingTwoPaneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,6 @@
 		9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListView.swift; sourceTree = "<group>"; };
 		9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListViewModel.swift; sourceTree = "<group>"; };
 		9DECFC0224C230F800FFEE87 /* FruitLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogView.swift; sourceTree = "<group>"; };
-		9DECFC0424C255D100FFEE87 /* SnappingTwoPaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingTwoPaneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 		9DECFBDD24AF7B4300FFEE87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9DECFC0424C255D100FFEE87 /* SnappingTwoPaneView.swift */,
 				9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */,
 				9DECFBFF24C2303500FFEE87 /* ListView */,
 				9DECFBED24AF8D9F00FFEE87 /* CounterView */,
@@ -257,7 +254,6 @@
 				9DECFBEA24AF89C500FFEE87 /* CounterButtonFactory.swift in Sources */,
 				9DECFBF124AF944800FFEE87 /* LogCoordinator.swift in Sources */,
 				9DECFBEF24AF8DC500FFEE87 /* Font+AppStyle.swift in Sources */,
-				9DECFC0524C255D100FFEE87 /* SnappingTwoPaneView.swift in Sources */,
 				9DECFBE624AF7D3300FFEE87 /* Rating.swift in Sources */,
 				9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */,
 				9DECFBF424AF947200FFEE87 /* DataCoordinator.swift in Sources */,
