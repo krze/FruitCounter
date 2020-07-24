@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FruitLogListView: View {
+    
     @ObservedObject var viewModel: FruitLogListViewModel
     
     var body: some View {
@@ -16,7 +17,8 @@ struct FruitLogListView: View {
             ForEach(viewModel.latestLogs(), id: \.hashValue) { fruitLog in
                 FruitLogView(fruitEmoji: fruitLog.fruit.emoji, date: fruitLog.dateConsumed, rating: fruitLog.rating, font: self.viewModel.font)
             }
-        }
+        }.cornerRadius(30.0)
+            .background(Color.pink)
     }
 }
 

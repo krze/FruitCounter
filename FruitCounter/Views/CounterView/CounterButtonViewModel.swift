@@ -36,7 +36,7 @@ struct CounterButtonViewModel {
     let cornerRadius: CGFloat
     let buttonSize: CGFloat
     
-    static let increment = CounterButtonViewModel(font: .appBoldFont(size: 72.0), direction: .increment, padding: 24.0, cornerRadius: 24.0, buttonSize: 96.0)
-    static let decrement = CounterButtonViewModel(font: .appBoldFont(size: 72.0), direction: .decrement, padding: 24.0, cornerRadius: 24.0, buttonSize: 96.0)
+    static let increment = CounterButtonViewModel(font: .appBoldFont(size: 72.0), direction: .increment, padding: 0.0, cornerRadius: 24.0, buttonSize: 96.0)
+    static let decrement = CounterButtonViewModel(font: .appBoldFont(size: 72.0), direction: .decrement, padding: 0.0, cornerRadius: 24.0, buttonSize: 96.0)
 
 }
