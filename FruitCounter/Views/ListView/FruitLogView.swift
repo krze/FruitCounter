@@ -22,7 +22,7 @@ struct FruitLogView: View {
         }.onTapGesture {
             self.isPresented.toggle()
         }.sheet(isPresented: $isPresented) {
-            DetailView(fruitLogViewModel: self.viewModel)
+            DetailView(fruitLogViewModel: self.viewModel, mutableFruitLog: self.viewModel.fruitLog.getMutableFruitLog())
         }
     }
 }

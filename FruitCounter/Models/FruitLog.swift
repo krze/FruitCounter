@@ -42,5 +42,9 @@ struct FruitLog: Codable, Hashable {
     func changeDate(to newDate: Date) -> FruitLog {
         return FruitLog(fruit: fruit, rating: rating, dateConsumed: newDate)
     }
+    
+    func getMutableFruitLog() -> MutableFruitLog {
+        MutableFruitLog(fruit: fruit, date: dateConsumed, rating: rating)
+    }
 
 }

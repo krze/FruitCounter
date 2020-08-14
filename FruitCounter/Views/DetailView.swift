@@ -9,15 +9,28 @@
 import SwiftUI
 
 struct DetailView: View {
+    
     @ObservedObject var fruitLogViewModel: FruitLogViewModel
+    @ObservedObject var mutableFruitLog: MutableFruitLog
+    
+    @State private var showDatePicker = false
     
     var body: some View {
         VStack {
-            Text(fruitLogViewModel.fruitLog.dateConsumed.localizedDateString())
+            Text(mutableFruitLog.date.localizedDateString()).onTapGesture {
+                self.showDatePicker.toggle()
+            }
+            if showDatePicker {
+                DatePicker("", selection: $mutableFruitLog.date, displayedComponents: [.date, .hourAndMinute])
+            }
             Text(fruitLogViewModel.fruitLog.fruit.emoji)
             Text(fruitLogViewModel.fruitLog.fruit.name)
             Text(fruitLogViewModel.fruitLog.rating.emoji)
-        }.font(fruitLogViewModel.font)
+        }
+        .font(fruitLogViewModel.font).animation(.easeInOut)
+        .onDisappear {
+            self.fruitLogViewModel.update(with: self.mutableFruitLog.makeFruitLog())
+        }
     }
     
 }
@@ -30,6 +43,6 @@ struct DetailView_Previews: PreviewProvider {
         let dataCoordinator = DataCoordinator()
         let logCoordinator = LogCoordinator(logBook: logBook, dataCoordinator: dataCoordinator)
         let viewModel = FruitLogViewModel(fruitLog: fruitLog, font: .appFont(size: 24), logCooordinator: logCoordinator)
-        return DetailView(fruitLogViewModel: viewModel)
+        return DetailView(fruitLogViewModel: viewModel, mutableFruitLog: fruitLog.getMutableFruitLog())
     }
 }
