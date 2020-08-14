@@ -11,6 +11,8 @@
 		9D4DD3D024E7318A00B84065 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3CF24E7318A00B84065 /* DetailView.swift */; };
 		9D4DD3D224E732CC00B84065 /* Date+LocalizedShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D124E732CC00B84065 /* Date+LocalizedShort.swift */; };
 		9D4DD3D424E738B300B84065 /* MutableFruitLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D324E738B300B84065 /* MutableFruitLog.swift */; };
+		9D4DD3D624E743AC00B84065 /* RatingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D524E743AC00B84065 /* RatingButtons.swift */; };
+		9D4DD3D824E7452C00B84065 /* RatingButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D724E7452C00B84065 /* RatingButtonsViewModel.swift */; };
 		9DDEB98024CB7FDA00BD77C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */; };
 		9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBC724AF768900FFEE87 /* AppDelegate.swift */; };
 		9DECFBCA24AF768900FFEE87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBC924AF768900FFEE87 /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		9D4DD3CF24E7318A00B84065 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9D4DD3D124E732CC00B84065 /* Date+LocalizedShort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+LocalizedShort.swift"; sourceTree = "<group>"; };
 		9D4DD3D324E738B300B84065 /* MutableFruitLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableFruitLog.swift; sourceTree = "<group>"; };
+		9D4DD3D524E743AC00B84065 /* RatingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingButtons.swift; sourceTree = "<group>"; };
+		9D4DD3D724E7452C00B84065 /* RatingButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingButtonsViewModel.swift; sourceTree = "<group>"; };
 		9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9DECFBC424AF768900FFEE87 /* FruitCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DECFBC724AF768900FFEE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			children = (
 				9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */,
 				9D4DD3CF24E7318A00B84065 /* DetailView.swift */,
+				9D4DD3D524E743AC00B84065 /* RatingButtons.swift */,
+				9D4DD3D724E7452C00B84065 /* RatingButtonsViewModel.swift */,
 				9DECFBFF24C2303500FFEE87 /* ListView */,
 				9DECFBED24AF8D9F00FFEE87 /* CounterView */,
 			);
@@ -258,6 +264,7 @@
 				9D4DD3D424E738B300B84065 /* MutableFruitLog.swift in Sources */,
 				9DECFC0124C2305E00FFEE87 /* FruitLogListViewModel.swift in Sources */,
 				9DECFBFE24C2302E00FFEE87 /* FruitLogListView.swift in Sources */,
+				9D4DD3D824E7452C00B84065 /* RatingButtonsViewModel.swift in Sources */,
 				9D4DD3D224E732CC00B84065 /* Date+LocalizedShort.swift in Sources */,
 				9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */,
 				9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */,
@@ -272,6 +279,7 @@
 				9DECFBEF24AF8DC500FFEE87 /* Font+AppStyle.swift in Sources */,
 				9DECFBE624AF7D3300FFEE87 /* Rating.swift in Sources */,
 				9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */,
+				9D4DD3D624E743AC00B84065 /* RatingButtons.swift in Sources */,
 				9DECFBF424AF947200FFEE87 /* DataCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

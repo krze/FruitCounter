@@ -23,9 +23,9 @@ struct DetailView: View {
             if showDatePicker {
                 DatePicker("", selection: $mutableFruitLog.date, displayedComponents: [.date, .hourAndMinute])
             }
-            Text(fruitLogViewModel.fruitLog.fruit.emoji)
+            Text(fruitLogViewModel.fruitLog.fruit.emoji).font(.appFont(size: 69))
             Text(fruitLogViewModel.fruitLog.fruit.name)
-            Text(fruitLogViewModel.fruitLog.rating.emoji)
+            RatingButtons(rating: $mutableFruitLog.rating, viewModel: RatingsButtonViewModel(currentRating: mutableFruitLog.rating))
         }
         .font(fruitLogViewModel.font).animation(.easeInOut)
         .onDisappear {
