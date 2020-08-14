@@ -9,34 +9,20 @@
 import SwiftUI
 
 struct FruitLogView: View {
-    let fruitEmoji: String
-    let date: Date
-    let rating: Rating
-    let font: Font
+    
+    let viewModel: FruitLogViewModel
+    @State private var isPresented = false
     
     var body: some View {
         HStack {
             Spacer()
-            Text(fruitEmoji).font(self.font).padding()
-            Text(localizedDateString(from: date)).font(self.font)
-            Text(rating.emoji).padding() // TODO: Long-press gesture to open quick rating wheel
-            Spacer()
+            Text(viewModel.fruitLog.fruit.emoji).font(viewModel.font).padding()
+            Text( viewModel.fruitLog.dateConsumed.localizedDateString()).font(viewModel.font)
+            Text(viewModel.fruitLog.rating.emoji).padding() // TODO: Long-press gesture to open quick rating wheel
         }.onTapGesture {
-            // TODO: respond to tap opening editor
-            print("Tapped \(self.fruitEmoji) \(self.localizedDateString(from: self.date))!")
+            self.isPresented.toggle()
+        }.sheet(isPresented: $isPresented) {
+            DetailView(fruitLogViewModel: self.viewModel)
         }
-    }
-    
-    private func localizedDateString(from date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
-    }
-}
-
-struct FruitLogView_Previews: PreviewProvider {
-    static var previews: some View {
-        FruitLogView(fruitEmoji: "🍉", date: Date(), rating: .thumbsUp, font: .appFont(size: 12))
     }
 }

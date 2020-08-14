@@ -67,12 +67,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func launch(with logBook: LogBook, dataCoordinator: DataCoordinator, scene: UIScene) {
         let logCoordinator = LogCoordinator(logBook: logBook, dataCoordinator: dataCoordinator)
         let counterViewModel = CounterViewModel(logCoordinator: logCoordinator, font: .appBoldFont(size: 69.0))
-//        let counterView = CounterView(viewModel: viewModel)
         
         let fruitLogListViewModel = FruitLogListViewModel(logCoordinator: logCoordinator, fruit: logCoordinator.currentLogBook.focusedFruit, font: .appFont(size: 24.0))
-        
-//        let tableView = FruitLogListView(viewModel: fruitLogListViewModel)
-        
         let view = MainView(maxBottomViewRatio: 0.5, counterViewModel: counterViewModel, listViewModel: fruitLogListViewModel)
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

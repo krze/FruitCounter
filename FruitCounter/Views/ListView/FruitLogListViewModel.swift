@@ -37,4 +37,8 @@ final class FruitLogListViewModel: ObservableObject {
     func latestLogs() -> [FruitLog] {
         logCoordinator.currentLogBook.logs
     }
+    
+    func fruitLogViewModel(from fruitLog: FruitLog) -> FruitLogViewModel {
+        FruitLogViewModel(fruitLog: fruitLog, font: font, logCooordinator: logCoordinator)
+    }
 }

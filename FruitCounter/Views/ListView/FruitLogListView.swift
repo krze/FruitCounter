@@ -11,11 +11,12 @@ import SwiftUI
 struct FruitLogListView: View {
     
     @ObservedObject var viewModel: FruitLogListViewModel
+    @State private var presentSheet = false
     
     var body: some View {
         List {
             ForEach(viewModel.latestLogs(), id: \.hashValue) { fruitLog in
-                FruitLogView(fruitEmoji: fruitLog.fruit.emoji, date: fruitLog.dateConsumed, rating: fruitLog.rating, font: self.viewModel.font)
+                FruitLogView(viewModel: self.viewModel.fruitLogViewModel(from: fruitLog))
             }
         }
         .cornerRadius(30.0)
