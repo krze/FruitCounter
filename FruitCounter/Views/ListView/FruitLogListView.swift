@@ -12,6 +12,7 @@ struct FruitLogListView: View {
     
     @ObservedObject var viewModel: FruitLogListViewModel
     @State private var presentSheet = false
+    let backgroundColor: UIColor
     
     var body: some View {
         List {
@@ -21,6 +22,8 @@ struct FruitLogListView: View {
         }
         .cornerRadius(30.0)
         .padding(30)
+        .background(Color(backgroundColor))
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -29,6 +32,6 @@ struct FruitLogListView_Previews: PreviewProvider {
         let testLogbook = LogBook(userName: "Default Username", logs: [], focusedFruit: .watermelon)
         let logCoordinator = LogCoordinator(logBook: testLogbook, dataCoordinator: DataCoordinator())
         let viewModel = FruitLogListViewModel(logCoordinator: logCoordinator, fruit: .watermelon, font: .appFont(size: 24.0))
-        return FruitLogListView(viewModel: viewModel)
+        return FruitLogListView(viewModel: viewModel, backgroundColor: .blue)
     }
 }

@@ -22,7 +22,7 @@ struct MainView: View {
         return 1 - maxBottomViewRatio
     }
     
-    let counterViewModel: CounterViewModel
+    @ObservedObject var counterViewModel: CounterViewModel
     let listViewModel: FruitLogListViewModel
     
     private var Content: some View {
@@ -34,7 +34,7 @@ struct MainView: View {
                            maxWidth: .infinity,
                            minHeight: 0,
                            maxHeight: self.dragOffset.height + self.topViewHeight)
-                    .background(Color(self.counterViewModel.fruit.backgroundColor()))
+                    .background(Color(self.counterViewModel.backgroundColor))
                     .gesture(
                         DragGesture()
                             .updating(self.$dragOffset, body: { (value, state, transaction) in
@@ -45,8 +45,7 @@ struct MainView: View {
                            })
                 )
                 
-                FruitLogListView(viewModel: self.listViewModel)
-                    .background(Color(self.counterViewModel.fruit.backgroundColor()))
+                FruitLogListView(viewModel: self.listViewModel, backgroundColor: self.counterViewModel.backgroundColor)
                     .animation(.easeInOut)
                     .frame(minWidth: 0,
                            maxWidth: .infinity,
@@ -62,11 +61,8 @@ struct MainView: View {
                            })
                 )
             }
-        .onAppear(perform: {
-            self.topViewHeight = geometry.size.height
-        })
+            .background(Color(self.counterViewModel.backgroundColor))
             .edgesIgnoringSafeArea(.all)
-            .background(Color(self.counterViewModel.fruit.backgroundColor()))
         }
     }
     

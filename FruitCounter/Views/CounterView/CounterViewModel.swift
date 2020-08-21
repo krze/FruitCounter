@@ -11,6 +11,7 @@ import SwiftUI
 
 final class CounterViewModel: ObservableObject, Identifiable {
     
+    @Published private(set) var backgroundColor: UIColor = .white
     @Published private(set) var fruit: Fruit
     @Published private(set) var count: Int
     @ObservedObject private var logCoordinator: LogCoordinator
@@ -25,6 +26,10 @@ final class CounterViewModel: ObservableObject, Identifiable {
         self.logCoordinator = logCoordinator
         self.font = font
         
+        DispatchQueue.main.async {
+            self.backgroundColor = self.fruit.backgroundColor()
+        }
+        
         disposables.insert(
             logCoordinator.$currentLogBook
             .map { logBook -> (fruit: Fruit, count: Int) in
@@ -34,6 +39,9 @@ final class CounterViewModel: ObservableObject, Identifiable {
             .sink { (fruit: Fruit, count: Int) in
             self.fruit = fruit
             self.count = count
+                DispatchQueue.main.async {
+                    self.backgroundColor = self.fruit.backgroundColor()
+                }
             }
         )
     }
