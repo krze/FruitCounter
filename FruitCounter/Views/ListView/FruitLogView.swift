@@ -11,7 +11,7 @@ import SwiftUI
 struct FruitLogView: View {
     
     let viewModel: FruitLogViewModel
-    @State private var isPresented = false
+    @Binding var presentDetail: FruitLogViewModel?
     
     var body: some View {
         HStack {
@@ -20,9 +20,7 @@ struct FruitLogView: View {
             Text( viewModel.fruitLog.dateConsumed.localizedDateString()).font(viewModel.font)
             Text(viewModel.fruitLog.rating.emoji).padding() // TODO: Long-press gesture to open quick rating wheel
         }.onTapGesture {
-            self.isPresented.toggle()
-        }.sheet(isPresented: $isPresented) {
-            DetailView(fruitLogViewModel: self.viewModel, mutableFruitLog: self.viewModel.fruitLog.getMutableFruitLog())
+            self.presentDetail = self.viewModel
         }
     }
 }

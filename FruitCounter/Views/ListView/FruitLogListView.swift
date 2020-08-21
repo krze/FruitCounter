@@ -11,19 +11,31 @@ import SwiftUI
 struct FruitLogListView: View {
     
     @ObservedObject var viewModel: FruitLogListViewModel
-    @State private var presentSheet = false
+    @State private var presentDetail: FruitLogViewModel?
     let backgroundColor: UIColor
     
     var body: some View {
-        List {
-            ForEach(viewModel.latestLogs(), id: \.hashValue) { fruitLog in
-                FruitLogView(viewModel: self.viewModel.fruitLogViewModel(from: fruitLog))
+        ZStack {
+            List {
+                ForEach(viewModel.latestLogs(), id: \.hashValue) { fruitLog in
+                    FruitLogView(viewModel: self.viewModel.fruitLogViewModel(from: fruitLog), presentDetail: self.$presentDetail)
+                }
             }
+            .cornerRadius(30.0)
+            .padding(30)
+            .background(Color(backgroundColor))
+            .edgesIgnoringSafeArea(.all)
+            
+            if presentDetail != nil {
+                DetailView(fruitLogViewModel: presentDetail!, mutableFruitLog: presentDetail!.fruitLog.getMutableFruitLog())
+                .transition(.slide)
+                .padding(25)
+                .background(Color(backgroundColor))
+                .cornerRadius(10)
+            }
+
         }
-        .cornerRadius(30.0)
-        .padding(30)
-        .background(Color(backgroundColor))
-        .edgesIgnoringSafeArea(.all)
+
     }
 }
 
