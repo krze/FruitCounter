@@ -13,6 +13,8 @@ struct MainView: View {
     @GestureState private var dragOffset: CGSize = .zero
     @State private var bottomViewHeight: CGFloat = .zero
     @State private var topViewHeight: CGFloat = .infinity
+    @State private var presentDetail: FruitLogViewModel?
+    @State private var blurRadius: CGFloat = .zero
     
     // How far the user drags before the view will snap
     private let snapTolerance: CGFloat = 50.0
@@ -27,42 +29,59 @@ struct MainView: View {
     
     private var Content: some View {
         GeometryReader { geometry in
-            VStack {
-                CounterView(viewModel: self.counterViewModel)
-                    .animation(.easeInOut)
-                    .frame(minWidth: 0,
-                           maxWidth: .infinity,
-                           minHeight: 0,
-                           maxHeight: self.dragOffset.height + self.topViewHeight)
-                    .background(Color(self.counterViewModel.backgroundColor))
-                    .gesture(
-                        DragGesture()
-                            .updating(self.$dragOffset, body: { (value, state, transaction) in
-                            state = value.translation
-                           })
-                           .onEnded({ (value) in
-                            self.snapViews(withTranslationHeight: -value.translation.height, geomoetry: geometry)
-                           })
-                )
+            ZStack {
+                VStack {
+                    CounterView(viewModel: self.counterViewModel)
+                        .animation(.easeInOut)
+                        .frame(minWidth: 0,
+                               maxWidth: .infinity,
+                               minHeight: 0,
+                               maxHeight: self.dragOffset.height + self.topViewHeight)
+                        .background(Color(self.counterViewModel.backgroundColor))
+                        .gesture(
+                            DragGesture()
+                                .updating(self.$dragOffset, body: { (value, state, transaction) in
+                                state = value.translation
+                               })
+                               .onEnded({ (value) in
+                                self.snapViews(withTranslationHeight: -value.translation.height, geomoetry: geometry)
+                               })
+                    )
+                    
+                    FruitLogListView(viewModel: self.listViewModel, presentDetail: self.$presentDetail, backgroundColor: self.counterViewModel.backgroundColor)
+                        .animation(.easeInOut)
+                        .frame(minWidth: 0,
+                               maxWidth: .infinity,
+                               minHeight: 0,
+                               maxHeight: -self.dragOffset.height + self.bottomViewHeight)
+                        .gesture(
+                            DragGesture()
+                                .updating(self.$dragOffset, body: { (value, state, transaction) in
+                                state = value.translation
+                               })
+                               .onEnded({ (value) in
+                                self.snapViews(withTranslationHeight: -value.translation.height, geomoetry: geometry)
+                               })
+                    )
+                }
+                .background(Color(self.counterViewModel.backgroundColor))
+                .edgesIgnoringSafeArea(.all)
+                .blur(radius: self.blurRadius)
+                .allowsHitTesting(self.blurRadius == .zero)
                 
-                FruitLogListView(viewModel: self.listViewModel, backgroundColor: self.counterViewModel.backgroundColor)
-                    .animation(.easeInOut)
-                    .frame(minWidth: 0,
-                           maxWidth: .infinity,
-                           minHeight: 0,
-                           maxHeight: -self.dragOffset.height + self.bottomViewHeight)
-                    .gesture(
-                        DragGesture()
-                            .updating(self.$dragOffset, body: { (value, state, transaction) in
-                            state = value.translation
-                           })
-                           .onEnded({ (value) in
-                            self.snapViews(withTranslationHeight: -value.translation.height, geomoetry: geometry)
-                           })
-                )
+                if self.presentDetail != nil {
+                    DetailView(fruitLogViewModel: self.presentDetail!, mutableFruitLog: self.presentDetail!.fruitLog.getMutableFruitLog())
+                        .transition(.scale)
+                    .padding(25)
+                    .background(Color(self.counterViewModel.backgroundColor))
+                    .cornerRadius(10)
+                    .onAppear {
+                            self.blurRadius = 5
+                    }
+                }
+
             }
-            .background(Color(self.counterViewModel.backgroundColor))
-            .edgesIgnoringSafeArea(.all)
+            
         }
     }
     

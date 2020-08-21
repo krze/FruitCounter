@@ -11,39 +11,29 @@ import SwiftUI
 struct FruitLogListView: View {
     
     @ObservedObject var viewModel: FruitLogListViewModel
-    @State private var presentDetail: FruitLogViewModel?
+    @Binding var presentDetail: FruitLogViewModel?
     let backgroundColor: UIColor
     
     var body: some View {
-        ZStack {
-            List {
-                ForEach(viewModel.latestLogs(), id: \.hashValue) { fruitLog in
-                    FruitLogView(viewModel: self.viewModel.fruitLogViewModel(from: fruitLog), presentDetail: self.$presentDetail)
-                }
+        List {
+            ForEach(viewModel.latestLogs(), id: \.hashValue) { fruitLog in
+                FruitLogView(viewModel: self.viewModel.fruitLogViewModel(from: fruitLog), presentDetail: self.$presentDetail)
             }
-            .cornerRadius(30.0)
-            .padding(30)
-            .background(Color(backgroundColor))
-            .edgesIgnoringSafeArea(.all)
-            
-            if presentDetail != nil {
-                DetailView(fruitLogViewModel: presentDetail!, mutableFruitLog: presentDetail!.fruitLog.getMutableFruitLog())
-                .transition(.slide)
-                .padding(25)
-                .background(Color(backgroundColor))
-                .cornerRadius(10)
-            }
-
         }
-
+        .cornerRadius(30.0)
+        .padding(30)
+        .background(Color(backgroundColor))
+        .edgesIgnoringSafeArea(.all)
     }
+
 }
 
 struct FruitLogListView_Previews: PreviewProvider {
+    @State static var presentDetailView: FruitLogViewModel?
     static var previews: some View {
         let testLogbook = LogBook(userName: "Default Username", logs: [], focusedFruit: .watermelon)
         let logCoordinator = LogCoordinator(logBook: testLogbook, dataCoordinator: DataCoordinator())
         let viewModel = FruitLogListViewModel(logCoordinator: logCoordinator, fruit: .watermelon, font: .appFont(size: 24.0))
-        return FruitLogListView(viewModel: viewModel, backgroundColor: .blue)
+        return FruitLogListView(viewModel: viewModel, presentDetail: $presentDetailView, backgroundColor: .blue)
     }
 }
