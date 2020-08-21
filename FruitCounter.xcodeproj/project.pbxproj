@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334E5B768701D178F0EB15B5 /* libPods-FruitCounter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09996346A25D79AA979DD7 /* libPods-FruitCounter.a */; };
 		9D4DD3CC24E72E6500B84065 /* FruitLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3CB24E72E6500B84065 /* FruitLogViewModel.swift */; };
 		9D4DD3D024E7318A00B84065 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3CF24E7318A00B84065 /* DetailView.swift */; };
 		9D4DD3D224E732CC00B84065 /* Date+LocalizedShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D124E732CC00B84065 /* Date+LocalizedShort.swift */; };
 		9D4DD3D424E738B300B84065 /* MutableFruitLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D324E738B300B84065 /* MutableFruitLog.swift */; };
 		9D4DD3D624E743AC00B84065 /* RatingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D524E743AC00B84065 /* RatingButtons.swift */; };
 		9D4DD3D824E7452C00B84065 /* RatingButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D724E7452C00B84065 /* RatingButtonsViewModel.swift */; };
+		9DC4A0AC24F05E5400EF4037 /* EmojiColorThief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4A0AB24F05E5400EF4037 /* EmojiColorThief.swift */; };
+		9DC4A0AE24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4A0AD24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift */; };
 		9DDEB98024CB7FDA00BD77C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */; };
 		9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBC724AF768900FFEE87 /* AppDelegate.swift */; };
 		9DECFBCA24AF768900FFEE87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBC924AF768900FFEE87 /* SceneDelegate.swift */; };
@@ -39,12 +42,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D27168CB1FCCEA00ACBB9E9 /* Pods-FruitCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitCounter.release.xcconfig"; path = "Target Support Files/Pods-FruitCounter/Pods-FruitCounter.release.xcconfig"; sourceTree = "<group>"; };
+		693FEFB357DD1AA0021DA6F3 /* Pods-FruitCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitCounter.debug.xcconfig"; path = "Target Support Files/Pods-FruitCounter/Pods-FruitCounter.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4DD3CB24E72E6500B84065 /* FruitLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogViewModel.swift; sourceTree = "<group>"; };
 		9D4DD3CF24E7318A00B84065 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9D4DD3D124E732CC00B84065 /* Date+LocalizedShort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+LocalizedShort.swift"; sourceTree = "<group>"; };
 		9D4DD3D324E738B300B84065 /* MutableFruitLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableFruitLog.swift; sourceTree = "<group>"; };
 		9D4DD3D524E743AC00B84065 /* RatingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingButtons.swift; sourceTree = "<group>"; };
 		9D4DD3D724E7452C00B84065 /* RatingButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingButtonsViewModel.swift; sourceTree = "<group>"; };
+		9DC4A0AB24F05E5400EF4037 /* EmojiColorThief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiColorThief.swift; sourceTree = "<group>"; };
+		9DC4A0AD24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+EmojiPalette.swift"; sourceTree = "<group>"; };
 		9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9DECFBC424AF768900FFEE87 /* FruitCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DECFBC724AF768900FFEE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +77,7 @@
 		9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListView.swift; sourceTree = "<group>"; };
 		9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListViewModel.swift; sourceTree = "<group>"; };
 		9DECFC0224C230F800FFEE87 /* FruitLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogView.swift; sourceTree = "<group>"; };
+		DE09996346A25D79AA979DD7 /* libPods-FruitCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FruitCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +85,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334E5B768701D178F0EB15B5 /* libPods-FruitCounter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		150A0F9A9F549AF0580F6AE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				693FEFB357DD1AA0021DA6F3 /* Pods-FruitCounter.debug.xcconfig */,
+				2D27168CB1FCCEA00ACBB9E9 /* Pods-FruitCounter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2BE26A2D5436E78E15B5A534 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE09996346A25D79AA979DD7 /* libPods-FruitCounter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9DECFBBB24AF768900FFEE87 = {
 			isa = PBXGroup;
 			children = (
 				9DECFBC624AF768900FFEE87 /* FruitCounter */,
 				9DECFBC524AF768900FFEE87 /* Products */,
+				150A0F9A9F549AF0580F6AE5 /* Pods */,
+				2BE26A2D5436E78E15B5A534 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +134,8 @@
 				9DECFBC924AF768900FFEE87 /* SceneDelegate.swift */,
 				9DECFBEE24AF8DC500FFEE87 /* Font+AppStyle.swift */,
 				9D4DD3D124E732CC00B84065 /* Date+LocalizedShort.swift */,
+				9DC4A0AB24F05E5400EF4037 /* EmojiColorThief.swift */,
+				9DC4A0AD24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift */,
 				9DECFBF224AF944E00FFEE87 /* Coordinators */,
 				9DECFBE024AF7BAA00FFEE87 /* Models */,
 				9DECFBDD24AF7B4300FFEE87 /* Views */,
@@ -191,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DECFBD824AF768A00FFEE87 /* Build configuration list for PBXNativeTarget "FruitCounter" */;
 			buildPhases = (
+				FCFBE0B43C107CD7B17968F3 /* [CP] Check Pods Manifest.lock */,
 				9DECFBC024AF768900FFEE87 /* Sources */,
 				9DECFBC124AF768900FFEE87 /* Frameworks */,
 				9DECFBC224AF768900FFEE87 /* Resources */,
@@ -250,6 +281,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FCFBE0B43C107CD7B17968F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FruitCounter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9DECFBC024AF768900FFEE87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,10 +317,12 @@
 				9DECFBE224AF7BBC00FFEE87 /* LogBook.swift in Sources */,
 				9D4DD3CC24E72E6500B84065 /* FruitLogViewModel.swift in Sources */,
 				9D4DD3D024E7318A00B84065 /* DetailView.swift in Sources */,
+				9DC4A0AE24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift in Sources */,
 				9D4DD3D424E738B300B84065 /* MutableFruitLog.swift in Sources */,
 				9DECFC0124C2305E00FFEE87 /* FruitLogListViewModel.swift in Sources */,
 				9DECFBFE24C2302E00FFEE87 /* FruitLogListView.swift in Sources */,
 				9D4DD3D824E7452C00B84065 /* RatingButtonsViewModel.swift in Sources */,
+				9DC4A0AC24F05E5400EF4037 /* EmojiColorThief.swift in Sources */,
 				9D4DD3D224E732CC00B84065 /* Date+LocalizedShort.swift in Sources */,
 				9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */,
 				9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */,
@@ -414,6 +472,7 @@
 		};
 		9DECFBD924AF768A00FFEE87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 693FEFB357DD1AA0021DA6F3 /* Pods-FruitCounter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -434,6 +493,7 @@
 		};
 		9DECFBDA24AF768A00FFEE87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D27168CB1FCCEA00ACBB9E9 /* Pods-FruitCounter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

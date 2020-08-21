@@ -9,9 +9,9 @@
 import Combine
 import SwiftUI
 
-final class RatingsButtonViewModel: ObservableObject {
-    @Published var thumbsUpFont: Font
-    @Published var thumbsDownFont: Font
+final class RatingsButtonViewModel {
+    var thumbsUpFont: Font
+    var thumbsDownFont: Font
     
     private var currentRating: Rating
     

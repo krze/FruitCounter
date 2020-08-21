@@ -1,0 +1,6 @@
+module Pods_FruitCounter {
+  umbrella header "Pods-FruitCounter-umbrella.h"
+
+  export *
+  module * { export * }
+}

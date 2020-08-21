@@ -34,7 +34,7 @@ struct MainView: View {
                            maxWidth: .infinity,
                            minHeight: 0,
                            maxHeight: self.dragOffset.height + self.topViewHeight)
-                    .background(Color.white)
+                    .background(Color(self.counterViewModel.fruit.backgroundColor()))
                     .gesture(
                         DragGesture()
                             .updating(self.$dragOffset, body: { (value, state, transaction) in
@@ -46,7 +46,7 @@ struct MainView: View {
                 )
                 
                 FruitLogListView(viewModel: self.listViewModel)
-                    .background(Color.white)
+                    .background(Color(self.counterViewModel.fruit.backgroundColor()))
                     .animation(.easeInOut)
                     .frame(minWidth: 0,
                            maxWidth: .infinity,
@@ -62,6 +62,11 @@ struct MainView: View {
                            })
                 )
             }
+        .onAppear(perform: {
+            self.topViewHeight = geometry.size.height
+        })
+            .edgesIgnoringSafeArea(.all)
+            .background(Color(self.counterViewModel.fruit.backgroundColor()))
         }
     }
     

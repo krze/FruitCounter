@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RatingButtons: View {
     @Binding var rating: Rating
-    @ObservedObject var viewModel: RatingsButtonViewModel
+    var viewModel: RatingsButtonViewModel
     
     var body: some View {
         HStack(spacing: 20) {

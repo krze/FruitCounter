@@ -6,6 +6,7 @@
 //  Copyright © 2020 Ken Krzeminski. All rights reserved.
 //
 
+import ColorThiefSwift
 import Foundation
 
 struct Fruit: Codable, Hashable {
@@ -18,6 +19,9 @@ struct Fruit: Codable, Hashable {
         hasher.combine(emoji)
     }
     
+    func backgroundColor() -> UIColor {
+        EmojiColorThief.getPalette(from: emoji).first ?? .white
+    }
     
     static let watermelon = Fruit(name: "Watermelon", emoji: "🍉")
 }

@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F902D9400B06C3F2EC625B55A6F2825 /* ColorThiefSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C6FB5F2A953DD1150F8711B464247F /* ColorThiefSwift-dummy.m */; };
+		20E1CE34DBFDA94F605E9E70BD2A8C4A /* ColorThiefSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BA1DAE092315DE08A981284DBE7E02E /* ColorThiefSwift-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		66E2DEF19A23703597BB6F306174358E /* Pods-FruitCounter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2747A25E590FFF6FD37A9D1C375BC37D /* Pods-FruitCounter-dummy.m */; };
+		7FF2D8225838152E5FE447A6CCECEF4C /* ColorThief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED0E1F8EB2B9BDDECB5878E92C65F9 /* ColorThief.swift */; };
+		E29AA91719B40187E9C8424A66B33637 /* Pods-FruitCounter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 480A534E4A29D7B455223754C2A256B1 /* Pods-FruitCounter-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EAE55767EB848485941CED1E20195A49 /* MMCQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56169DCD088778579634DF4FFCB108D2 /* MMCQ.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEAB29B8F19C9AF7C61D0975B67F56F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AC4379E339EE63C43CD14649029C7E8;
+			remoteInfo = ColorThiefSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2747A25E590FFF6FD37A9D1C375BC37D /* Pods-FruitCounter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FruitCounter-dummy.m"; sourceTree = "<group>"; };
+		2AED0E1F8EB2B9BDDECB5878E92C65F9 /* ColorThief.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorThief.swift; path = ColorThiefSwift/Classes/ColorThief.swift; sourceTree = "<group>"; };
+		3686058C7B228377FDC0BF728D623CA2 /* libColorThiefSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libColorThiefSwift.a; path = libColorThiefSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FE14A81B712E0EC052EC886828DCC0 /* ColorThiefSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorThiefSwift.debug.xcconfig; sourceTree = "<group>"; };
+		3DCF50CDA114839D3D6A55C8B6A169F4 /* Pods-FruitCounter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FruitCounter-acknowledgements.plist"; sourceTree = "<group>"; };
+		480A534E4A29D7B455223754C2A256B1 /* Pods-FruitCounter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FruitCounter-umbrella.h"; sourceTree = "<group>"; };
+		56169DCD088778579634DF4FFCB108D2 /* MMCQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MMCQ.swift; path = ColorThiefSwift/Classes/MMCQ.swift; sourceTree = "<group>"; };
+		563440586A8A0F6C78B6640DA3494ADC /* Pods-FruitCounter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FruitCounter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5BA1DAE092315DE08A981284DBE7E02E /* ColorThiefSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorThiefSwift-umbrella.h"; sourceTree = "<group>"; };
+		81C6FB5F2A953DD1150F8711B464247F /* ColorThiefSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorThiefSwift-dummy.m"; sourceTree = "<group>"; };
+		8B6A643D9B67D85E8E70EA0E44E6A9E3 /* libPods-FruitCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-FruitCounter.a"; path = "libPods-FruitCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD2721B737633526428BF7B1F6CC21E8 /* ColorThiefSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ColorThiefSwift.modulemap; sourceTree = "<group>"; };
+		C64A232367B561841FF314146BF2872A /* ColorThiefSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorThiefSwift-prefix.pch"; sourceTree = "<group>"; };
+		D300E45F0A49585B54E4DF78FB8A27DA /* Pods-FruitCounter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FruitCounter.modulemap"; sourceTree = "<group>"; };
+		D7CBB900F44D7A8162CA0798BD5CC961 /* Pods-FruitCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FruitCounter.debug.xcconfig"; sourceTree = "<group>"; };
+		E0D63429FCE3FF384B7E66830F64280F /* ColorThiefSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorThiefSwift.release.xcconfig; sourceTree = "<group>"; };
+		E63F172B95EFFD4C532562AD7F0307DF /* Pods-FruitCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FruitCounter.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11DFEA6E22F75363D5EF7600D2527F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		577E6EA475BA73399081072499CACBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19F6EC3EC0A1C990F500B2D3AA14F67E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBE8EF367D0DCEEA10E5FFFD984AE2C7 /* Pods-FruitCounter */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2E6D6D0483620A385980C57E8200FC84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD2721B737633526428BF7B1F6CC21E8 /* ColorThiefSwift.modulemap */,
+				81C6FB5F2A953DD1150F8711B464247F /* ColorThiefSwift-dummy.m */,
+				C64A232367B561841FF314146BF2872A /* ColorThiefSwift-prefix.pch */,
+				5BA1DAE092315DE08A981284DBE7E02E /* ColorThiefSwift-umbrella.h */,
+				38FE14A81B712E0EC052EC886828DCC0 /* ColorThiefSwift.debug.xcconfig */,
+				E0D63429FCE3FF384B7E66830F64280F /* ColorThiefSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ColorThiefSwift";
+			sourceTree = "<group>";
+		};
+		B59C453DBF71B6D9470E52C973DC7B7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C12C3D65C4BC6B86F32888B22CBF8FC8 /* ColorThiefSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C12C3D65C4BC6B86F32888B22CBF8FC8 /* ColorThiefSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2AED0E1F8EB2B9BDDECB5878E92C65F9 /* ColorThief.swift */,
+				56169DCD088778579634DF4FFCB108D2 /* MMCQ.swift */,
+				2E6D6D0483620A385980C57E8200FC84 /* Support Files */,
+			);
+			name = ColorThiefSwift;
+			path = ColorThiefSwift;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				B59C453DBF71B6D9470E52C973DC7B7F /* Pods */,
+				D642A87860F807C3E06DA701BD8AEAC8 /* Products */,
+				19F6EC3EC0A1C990F500B2D3AA14F67E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D642A87860F807C3E06DA701BD8AEAC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3686058C7B228377FDC0BF728D623CA2 /* libColorThiefSwift.a */,
+				8B6A643D9B67D85E8E70EA0E44E6A9E3 /* libPods-FruitCounter.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBE8EF367D0DCEEA10E5FFFD984AE2C7 /* Pods-FruitCounter */ = {
+			isa = PBXGroup;
+			children = (
+				D300E45F0A49585B54E4DF78FB8A27DA /* Pods-FruitCounter.modulemap */,
+				563440586A8A0F6C78B6640DA3494ADC /* Pods-FruitCounter-acknowledgements.markdown */,
+				3DCF50CDA114839D3D6A55C8B6A169F4 /* Pods-FruitCounter-acknowledgements.plist */,
+				2747A25E590FFF6FD37A9D1C375BC37D /* Pods-FruitCounter-dummy.m */,
+				480A534E4A29D7B455223754C2A256B1 /* Pods-FruitCounter-umbrella.h */,
+				D7CBB900F44D7A8162CA0798BD5CC961 /* Pods-FruitCounter.debug.xcconfig */,
+				E63F172B95EFFD4C532562AD7F0307DF /* Pods-FruitCounter.release.xcconfig */,
+			);
+			name = "Pods-FruitCounter";
+			path = "Target Support Files/Pods-FruitCounter";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		045B42CFB8ECFF76FA3D15B5EEFE7EF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20E1CE34DBFDA94F605E9E70BD2A8C4A /* ColorThiefSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		221D6124CD12000B69EBC94F0252986D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29AA91719B40187E9C8424A66B33637 /* Pods-FruitCounter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AC4379E339EE63C43CD14649029C7E8 /* ColorThiefSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE35243C2186D22D649765F80AD157F1 /* Build configuration list for PBXNativeTarget "ColorThiefSwift" */;
+			buildPhases = (
+				045B42CFB8ECFF76FA3D15B5EEFE7EF7 /* Headers */,
+				67492AC63D6EA44202A05A80D52D3E7D /* Sources */,
+				11DFEA6E22F75363D5EF7600D2527F1A /* Frameworks */,
+				164793803E0C518320B005B043363473 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorThiefSwift;
+			productName = ColorThiefSwift;
+			productReference = 3686058C7B228377FDC0BF728D623CA2 /* libColorThiefSwift.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		97A1AAB925B2907CBBE72A75CB2C5F41 /* Pods-FruitCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8B8A337D3E65B45AE8D2410A98EA0D /* Build configuration list for PBXNativeTarget "Pods-FruitCounter" */;
+			buildPhases = (
+				221D6124CD12000B69EBC94F0252986D /* Headers */,
+				1FDE856B76525C55231AC1EE0602219E /* Sources */,
+				577E6EA475BA73399081072499CACBC5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C102EA337793FA1CBE42D8C218F0AF6 /* PBXTargetDependency */,
+			);
+			name = "Pods-FruitCounter";
+			productName = "Pods-FruitCounter";
+			productReference = 8B6A643D9B67D85E8E70EA0E44E6A9E3 /* libPods-FruitCounter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D642A87860F807C3E06DA701BD8AEAC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AC4379E339EE63C43CD14649029C7E8 /* ColorThiefSwift */,
+				97A1AAB925B2907CBBE72A75CB2C5F41 /* Pods-FruitCounter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		164793803E0C518320B005B043363473 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/ColorThiefSwift/ColorThiefSwift.modulemap",
+				"${PODS_ROOT}/Headers/Public/ColorThiefSwift/ColorThiefSwift-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/ColorThiefSwift-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/ColorThiefSwift/ColorThiefSwift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/ColorThiefSwift/ColorThiefSwift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FDE856B76525C55231AC1EE0602219E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E2DEF19A23703597BB6F306174358E /* Pods-FruitCounter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67492AC63D6EA44202A05A80D52D3E7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FF2D8225838152E5FE447A6CCECEF4C /* ColorThief.swift in Sources */,
+				0F902D9400B06C3F2EC625B55A6F2825 /* ColorThiefSwift-dummy.m in Sources */,
+				EAE55767EB848485941CED1E20195A49 /* MMCQ.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C102EA337793FA1CBE42D8C218F0AF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorThiefSwift;
+			target = 0AC4379E339EE63C43CD14649029C7E8 /* ColorThiefSwift */;
+			targetProxy = DEAB29B8F19C9AF7C61D0975B67F56F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0CEC9C7378178240DC348D1874CE0E1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7CBB900F44D7A8162CA0798BD5CC961 /* Pods-FruitCounter.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FruitCounter/Pods-FruitCounter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3269FF69F9FF8CD10FBCEE0AAA24E3EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0D63429FCE3FF384B7E66830F64280F /* ColorThiefSwift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorThiefSwift/ColorThiefSwift-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/ColorThiefSwift/ColorThiefSwift.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ColorThiefSwift;
+				PRODUCT_NAME = ColorThiefSwift;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		834A386BD7B4B875730B7DB833FA0D37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E63F172B95EFFD4C532562AD7F0307DF /* Pods-FruitCounter.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FruitCounter/Pods-FruitCounter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BE89426F8049A185F01EC37A2714BE46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38FE14A81B712E0EC052EC886828DCC0 /* ColorThiefSwift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorThiefSwift/ColorThiefSwift-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/ColorThiefSwift/ColorThiefSwift.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ColorThiefSwift;
+				PRODUCT_NAME = ColorThiefSwift;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B8B8A337D3E65B45AE8D2410A98EA0D /* Build configuration list for PBXNativeTarget "Pods-FruitCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CEC9C7378178240DC348D1874CE0E1A /* Debug */,
+				834A386BD7B4B875730B7DB833FA0D37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE35243C2186D22D649765F80AD157F1 /* Build configuration list for PBXNativeTarget "ColorThiefSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE89426F8049A185F01EC37A2714BE46 /* Debug */,
+				3269FF69F9FF8CD10FBCEE0AAA24E3EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
