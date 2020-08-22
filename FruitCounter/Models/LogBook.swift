@@ -23,6 +23,9 @@ struct LogBook: Codable {
         var mutableLogs = logs
         mutableLogs.append(newLog)
         
+        mutableLogs.sort {
+            $0.dateConsumed > $1.dateConsumed
+        }
         return LogBook(userName: userName, logs: mutableLogs, focusedFruit: focusedFruit)
     }
     
@@ -32,6 +35,10 @@ struct LogBook: Codable {
         guard let index = mutableLogs.firstIndex(of: log) else { throw LogError.logNotFound(log) }
         
         mutableLogs.remove(at: index)
+        
+        mutableLogs.sort {
+            $0.dateConsumed > $1.dateConsumed
+        }
         
         return LogBook(userName: userName, logs: mutableLogs, focusedFruit: focusedFruit)
     }

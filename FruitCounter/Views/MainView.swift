@@ -30,6 +30,7 @@ struct MainView: View {
     private var Content: some View {
         GeometryReader { geometry in
             ZStack {
+                Color(self.counterViewModel.backgroundColor).edgesIgnoringSafeArea(.all)
                 VStack {
                     CounterView(viewModel: self.counterViewModel)
                         .animation(.easeInOut)
@@ -65,19 +66,29 @@ struct MainView: View {
                     )
                 }
                 .background(Color(self.counterViewModel.backgroundColor))
-                .edgesIgnoringSafeArea(.all)
                 .blur(radius: self.blurRadius)
                 .allowsHitTesting(self.blurRadius == .zero)
                 
                 if self.presentDetail != nil {
-                    DetailView(fruitLogViewModel: self.presentDetail!, mutableFruitLog: self.presentDetail!.fruitLog.getMutableFruitLog())
-                        .transition(.scale)
-                    .padding(25)
-                    .background(Color(self.counterViewModel.backgroundColor))
-                    .cornerRadius(10)
-                    .onAppear {
-                            self.blurRadius = 5
-                    }
+                    ZStack {
+                        Color.black.opacity(0.1)
+                            .edgesIgnoringSafeArea(.all)
+                            .onTapGesture {
+                                withAnimation {
+                                    self.presentDetail = nil
+                                    self.blurRadius = .zero
+                                }
+                        }
+                        
+                        DetailView(fruitLogViewModel: self.presentDetail!, mutableFruitLog: self.presentDetail!.fruitLog.getMutableFruitLog())
+                            .padding(25)
+                            .background(Color(self.counterViewModel.backgroundColor))
+                            .cornerRadius(10)
+                            .onAppear {
+                                self.blurRadius = 5
+                            }
+
+                    }.animation(.easeInOut)
                 }
 
             }

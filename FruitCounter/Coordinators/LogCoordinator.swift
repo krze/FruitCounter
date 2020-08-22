@@ -24,17 +24,23 @@ final class LogCoordinator: ObservableObject {
     
     /// Changes focus to the fruit specified
     func change(to fruit: Fruit) {
-        currentLogBook = currentLogBook.change(focusedFruit: fruit)
+        DispatchQueue.main.async {
+            self.currentLogBook = self.currentLogBook.change(focusedFruit: fruit)
+        }
     }
     
     /// Changes the username
     func change(username: String) {
-        currentLogBook = currentLogBook.change(userName: username)
+        DispatchQueue.main.async {
+            self.currentLogBook = self.currentLogBook.change(userName: username)
+        }
     }
     
     /// Adds the given log to the logbook
     func add(_ log: FruitLog) {
-        currentLogBook = currentLogBook.add(log)
+        DispatchQueue.main.async {
+            self.currentLogBook = self.currentLogBook.add(log)
+        }
     }
     
     /// Removes the most recent log for the specified fruit

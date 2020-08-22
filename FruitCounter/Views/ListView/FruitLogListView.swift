@@ -23,7 +23,6 @@ struct FruitLogListView: View {
         .cornerRadius(30.0)
         .padding(30)
         .background(Color(backgroundColor))
-        .edgesIgnoringSafeArea(.all)
     }
 
 }
