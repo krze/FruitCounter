@@ -41,4 +41,8 @@ final class FruitLogListViewModel: ObservableObject {
     func fruitLogViewModel(from fruitLog: FruitLog) -> FruitLogViewModel {
         FruitLogViewModel(fruitLog: fruitLog, font: font, logCooordinator: logCoordinator)
     }
+    
+    func remove(at indexSet: IndexSet) {
+        logCoordinator.remove(at: indexSet)
+    }
 }

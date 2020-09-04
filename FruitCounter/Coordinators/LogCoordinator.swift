@@ -81,4 +81,7 @@ final class LogCoordinator: ObservableObject {
         }
     }
     
+    func remove(at indexSet: IndexSet) {
+        currentLogBook = currentLogBook.remove(at: indexSet)
+    }
 }

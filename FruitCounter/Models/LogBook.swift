@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct LogBook: Codable {
     
@@ -35,6 +36,18 @@ struct LogBook: Codable {
         guard let index = mutableLogs.firstIndex(of: log) else { throw LogError.logNotFound(log) }
         
         mutableLogs.remove(at: index)
+        
+        mutableLogs.sort {
+            $0.dateConsumed > $1.dateConsumed
+        }
+        
+        return LogBook(userName: userName, logs: mutableLogs, focusedFruit: focusedFruit)
+    }
+    
+    func remove(at indexSet: IndexSet) -> LogBook {
+        var mutableLogs = logs
+        
+        mutableLogs.remove(atOffsets: indexSet)
         
         mutableLogs.sort {
             $0.dateConsumed > $1.dateConsumed
