@@ -19,8 +19,10 @@ struct Fruit: Codable, Hashable {
         hasher.combine(emoji)
     }
     
-    func backgroundColor() -> UIColor {
-        EmojiColorThief.getPalette(from: emoji).first ?? .white
+    func palette() -> EmojiPalette {
+        var colors = EmojiColorThief.getPalette(from: emoji)
+        
+        return EmojiPalette(primary: colors.removeFirst(), secondary: colors.removeFirst(), tertiary: colors.removeFirst())
     }
     
     static let watermelon = Fruit(name: "Watermelon", emoji: "🍉")

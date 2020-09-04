@@ -16,6 +16,8 @@
 		9D4DD3D824E7452C00B84065 /* RatingButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD3D724E7452C00B84065 /* RatingButtonsViewModel.swift */; };
 		9DC4A0AC24F05E5400EF4037 /* EmojiColorThief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4A0AB24F05E5400EF4037 /* EmojiColorThief.swift */; };
 		9DC4A0AE24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4A0AD24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift */; };
+		9DC4A0B02502BCE600EF4037 /* ThumbButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4A0AF2502BCE600EF4037 /* ThumbButtonStyle.swift */; };
+		9DC4A0B22502C06300EF4037 /* EmojiPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4A0B12502C06300EF4037 /* EmojiPalette.swift */; };
 		9DDEB98024CB7FDA00BD77C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */; };
 		9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBC724AF768900FFEE87 /* AppDelegate.swift */; };
 		9DECFBCA24AF768900FFEE87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBC924AF768900FFEE87 /* SceneDelegate.swift */; };
@@ -28,14 +30,11 @@
 		9DECFBE424AF7C6600FFEE87 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBE324AF7C6600FFEE87 /* Fruit.swift */; };
 		9DECFBE624AF7D3300FFEE87 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBE524AF7D3300FFEE87 /* Rating.swift */; };
 		9DECFBE824AF817800FFEE87 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBE724AF817800FFEE87 /* CounterViewModel.swift */; };
-		9DECFBEA24AF89C500FFEE87 /* CounterButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBE924AF89C500FFEE87 /* CounterButtonFactory.swift */; };
-		9DECFBEC24AF8A0600FFEE87 /* CounterButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBEB24AF8A0600FFEE87 /* CounterButtonViewModel.swift */; };
 		9DECFBEF24AF8DC500FFEE87 /* Font+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBEE24AF8DC500FFEE87 /* Font+AppStyle.swift */; };
 		9DECFBF124AF944800FFEE87 /* LogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF024AF944800FFEE87 /* LogCoordinator.swift */; };
 		9DECFBF424AF947200FFEE87 /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF324AF947200FFEE87 /* DataCoordinator.swift */; };
 		9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */; };
 		9DECFBFA24C22DA100FFEE87 /* EmojiCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */; };
-		9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */; };
 		9DECFBFE24C2302E00FFEE87 /* FruitLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */; };
 		9DECFC0124C2305E00FFEE87 /* FruitLogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */; };
 		9DECFC0324C230F800FFEE87 /* FruitLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECFC0224C230F800FFEE87 /* FruitLogView.swift */; };
@@ -52,6 +51,8 @@
 		9D4DD3D724E7452C00B84065 /* RatingButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingButtonsViewModel.swift; sourceTree = "<group>"; };
 		9DC4A0AB24F05E5400EF4037 /* EmojiColorThief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiColorThief.swift; sourceTree = "<group>"; };
 		9DC4A0AD24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+EmojiPalette.swift"; sourceTree = "<group>"; };
+		9DC4A0AF2502BCE600EF4037 /* ThumbButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbButtonStyle.swift; sourceTree = "<group>"; };
+		9DC4A0B12502C06300EF4037 /* EmojiPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPalette.swift; sourceTree = "<group>"; };
 		9DDEB97F24CB7FDA00BD77C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9DECFBC424AF768900FFEE87 /* FruitCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DECFBC724AF768900FFEE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,14 +67,11 @@
 		9DECFBE324AF7C6600FFEE87 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		9DECFBE524AF7D3300FFEE87 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		9DECFBE724AF817800FFEE87 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
-		9DECFBE924AF89C500FFEE87 /* CounterButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButtonFactory.swift; sourceTree = "<group>"; };
-		9DECFBEB24AF8A0600FFEE87 /* CounterButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButtonViewModel.swift; sourceTree = "<group>"; };
 		9DECFBEE24AF8DC500FFEE87 /* Font+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+AppStyle.swift"; sourceTree = "<group>"; };
 		9DECFBF024AF944800FFEE87 /* LogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCoordinator.swift; sourceTree = "<group>"; };
 		9DECFBF324AF947200FFEE87 /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		9DECFBF724B5091300FFEE87 /* DataLoadPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadPublisher.swift; sourceTree = "<group>"; };
 		9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCounterView.swift; sourceTree = "<group>"; };
-		9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCounterButtonView.swift; sourceTree = "<group>"; };
 		9DECFBFD24C2302E00FFEE87 /* FruitLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListView.swift; sourceTree = "<group>"; };
 		9DECFC0024C2305E00FFEE87 /* FruitLogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogListViewModel.swift; sourceTree = "<group>"; };
 		9DECFC0224C230F800FFEE87 /* FruitLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitLogView.swift; sourceTree = "<group>"; };
@@ -135,6 +133,7 @@
 				9DECFBEE24AF8DC500FFEE87 /* Font+AppStyle.swift */,
 				9D4DD3D124E732CC00B84065 /* Date+LocalizedShort.swift */,
 				9DC4A0AB24F05E5400EF4037 /* EmojiColorThief.swift */,
+				9DC4A0B12502C06300EF4037 /* EmojiPalette.swift */,
 				9DC4A0AD24F065FE00EF4037 /* EnvironmentValues+EmojiPalette.swift */,
 				9DECFBF224AF944E00FFEE87 /* Coordinators */,
 				9DECFBE024AF7BAA00FFEE87 /* Models */,
@@ -184,11 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				9DECFBE724AF817800FFEE87 /* CounterViewModel.swift */,
-				9DECFBE924AF89C500FFEE87 /* CounterButtonFactory.swift */,
-				9DECFBEB24AF8A0600FFEE87 /* CounterButtonViewModel.swift */,
 				9DECFBDB24AF790900FFEE87 /* CounterView.swift */,
 				9DECFBF924C22DA100FFEE87 /* EmojiCounterView.swift */,
-				9DECFBFB24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift */,
+				9DC4A0AF2502BCE600EF4037 /* ThumbButtonStyle.swift */,
 			);
 			path = CounterView;
 			sourceTree = "<group>";
@@ -325,17 +322,16 @@
 				9DC4A0AC24F05E5400EF4037 /* EmojiColorThief.swift in Sources */,
 				9D4DD3D224E732CC00B84065 /* Date+LocalizedShort.swift in Sources */,
 				9DECFBC824AF768900FFEE87 /* AppDelegate.swift in Sources */,
-				9DECFBFC24C22E6A00FFEE87 /* HorizontalCounterButtonView.swift in Sources */,
 				9DECFBDF24AF7B7100FFEE87 /* FruitLog.swift in Sources */,
 				9DECFBCA24AF768900FFEE87 /* SceneDelegate.swift in Sources */,
-				9DECFBEC24AF8A0600FFEE87 /* CounterButtonViewModel.swift in Sources */,
 				9DECFBE824AF817800FFEE87 /* CounterViewModel.swift in Sources */,
 				9DECFBDC24AF790900FFEE87 /* CounterView.swift in Sources */,
 				9DECFBFA24C22DA100FFEE87 /* EmojiCounterView.swift in Sources */,
-				9DECFBEA24AF89C500FFEE87 /* CounterButtonFactory.swift in Sources */,
 				9DECFBF124AF944800FFEE87 /* LogCoordinator.swift in Sources */,
 				9DECFBEF24AF8DC500FFEE87 /* Font+AppStyle.swift in Sources */,
 				9DECFBE624AF7D3300FFEE87 /* Rating.swift in Sources */,
+				9DC4A0B02502BCE600EF4037 /* ThumbButtonStyle.swift in Sources */,
+				9DC4A0B22502C06300EF4037 /* EmojiPalette.swift in Sources */,
 				9DECFBF824B5091300FFEE87 /* DataLoadPublisher.swift in Sources */,
 				9D4DD3D624E743AC00B84065 /* RatingButtons.swift in Sources */,
 				9DECFBF424AF947200FFEE87 /* DataCoordinator.swift in Sources */,

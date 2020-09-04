@@ -18,10 +18,11 @@ struct CounterView: View {
     var body: some View {
         VStack {
             EmojiCounterView(emoji: viewModel.fruit.emoji, count: viewModel.count, font: viewModel.font)
-            HorizontalCounterButtonView(leftButtonModel: .decrement,
-                                        leftButtonAction: viewModel.decrement,
-                                        rightButtonModel: .increment,
-                                        rightButtonAction: viewModel.increment)
+            
+            HStack {
+                Button("👎", action: viewModel.incrementThumbsDown)
+                Button("👍", action: viewModel.incrementThumbsUp)
+            }.buttonStyle(ThumbButtonStyle(foreground: Color(viewModel.palette.primary), background: Color(viewModel.palette.secondary))).animation(.easeIn)
         }
     }
     

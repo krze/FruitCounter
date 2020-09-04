@@ -11,7 +11,7 @@ import SwiftUI
 
 final class CounterViewModel: ObservableObject, Identifiable {
     
-    @Published private(set) var backgroundColor: UIColor = .white
+    @Published private(set) var palette: EmojiPalette = .blackAndWhite
     @Published private(set) var fruit: Fruit
     @Published private(set) var count: Int
     @ObservedObject private var logCoordinator: LogCoordinator
@@ -27,7 +27,7 @@ final class CounterViewModel: ObservableObject, Identifiable {
         self.font = font
         
         DispatchQueue.main.async {
-            self.backgroundColor = self.fruit.backgroundColor()
+            self.palette = self.fruit.palette()
         }
         
         disposables.insert(
@@ -40,7 +40,7 @@ final class CounterViewModel: ObservableObject, Identifiable {
             self.fruit = fruit
             self.count = count
                 DispatchQueue.main.async {
-                    self.backgroundColor = self.fruit.backgroundColor()
+                    self.palette = self.fruit.palette()
                 }
             }
         )
@@ -50,17 +50,12 @@ final class CounterViewModel: ObservableObject, Identifiable {
         disposables.forEach { $0.cancel() }
     }
     
-    func increment() {
-        logCoordinator.add(FruitLog(fruit: fruit, dateConsumed: Date()))
+    func incrementThumbsUp() {
+        logCoordinator.add(FruitLog(fruit: fruit, rating: .thumbsUp, dateConsumed: Date()))
     }
     
-    func decrement() {
-        do {
-            try logCoordinator.removeMostRecent(fruit)
-        }
-        catch let error {
-            print(error)
-        }
+    func incrementThumbsDown() {
+        logCoordinator.add(FruitLog(fruit: fruit, rating: .thumbsDown, dateConsumed: Date()))
     }
 
 }

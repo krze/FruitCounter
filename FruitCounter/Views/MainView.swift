@@ -30,7 +30,7 @@ struct MainView: View {
     private var Content: some View {
         GeometryReader { geometry in
             ZStack {
-                Color(self.counterViewModel.backgroundColor).edgesIgnoringSafeArea(.all)
+                Color(self.counterViewModel.palette.primary).edgesIgnoringSafeArea(.all)
                 VStack {
                     CounterView(viewModel: self.counterViewModel)
                         .animation(.easeInOut)
@@ -38,7 +38,7 @@ struct MainView: View {
                                maxWidth: .infinity,
                                minHeight: 0,
                                maxHeight: self.dragOffset.height + self.topViewHeight)
-                        .background(Color(self.counterViewModel.backgroundColor))
+                        .background(Color(self.counterViewModel.palette.primary))
                         .gesture(
                             DragGesture()
                                 .updating(self.$dragOffset, body: { (value, state, transaction) in
@@ -49,7 +49,7 @@ struct MainView: View {
                                })
                     )
                     
-                    FruitLogListView(viewModel: self.listViewModel, presentDetail: self.$presentDetail, backgroundColor: self.counterViewModel.backgroundColor)
+                    FruitLogListView(viewModel: self.listViewModel, presentDetail: self.$presentDetail, backgroundColor: self.counterViewModel.palette.primary)
                         .animation(.easeInOut)
                         .frame(minWidth: 0,
                                maxWidth: .infinity,
@@ -65,7 +65,7 @@ struct MainView: View {
                                })
                     )
                 }
-                .background(Color(self.counterViewModel.backgroundColor))
+                .background(Color(self.counterViewModel.palette.primary))
                 .blur(radius: self.blurRadius)
                 .allowsHitTesting(self.blurRadius == .zero)
                 
@@ -82,7 +82,7 @@ struct MainView: View {
                         
                         DetailView(fruitLogViewModel: self.presentDetail!, mutableFruitLog: self.presentDetail!.fruitLog.getMutableFruitLog())
                             .padding(25)
-                            .background(Color(self.counterViewModel.backgroundColor))
+                            .background(Color(self.counterViewModel.palette.primary))
                             .cornerRadius(10)
                             .onAppear {
                                 self.blurRadius = 5
