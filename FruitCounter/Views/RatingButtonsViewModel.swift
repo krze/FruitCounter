@@ -10,27 +10,28 @@ import Combine
 import SwiftUI
 
 final class RatingsButtonViewModel {
-    var thumbsUpFont: Font
-    var thumbsDownFont: Font
+    let font: Font = .appFont(size: 69)
+    var thumbsUpOpacity: Double
+    var thumbsDownOpacity: Double
     
     private var currentRating: Rating
     
-    private let selectedFont: Font = .appFont(size: 69)
-    private let unselectedFont: Font = .appFont(size: 42)
+    private let selectedOpacity: Double = 1
+    private let unselectedOpacity: Double = 0.35
     
     init(currentRating: Rating) {
         self.currentRating = currentRating
         
         switch currentRating {
         case .unrated:
-            thumbsUpFont = unselectedFont
-            thumbsDownFont = unselectedFont
+            thumbsUpOpacity = unselectedOpacity
+            thumbsDownOpacity = unselectedOpacity
         case .thumbsDown:
-            thumbsUpFont = unselectedFont
-            thumbsDownFont = selectedFont
+            thumbsUpOpacity = unselectedOpacity
+            thumbsDownOpacity = selectedOpacity
         case .thumbsUp:
-            thumbsUpFont = selectedFont
-            thumbsDownFont = unselectedFont
+            thumbsUpOpacity = selectedOpacity
+            thumbsDownOpacity = unselectedOpacity
         }
     }
 

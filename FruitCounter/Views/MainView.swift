@@ -55,15 +55,6 @@ struct MainView: View {
                                maxWidth: .infinity,
                                minHeight: 0,
                                maxHeight: -self.dragOffset.height + self.bottomViewHeight)
-                        .gesture(
-                            DragGesture()
-                                .updating(self.$dragOffset, body: { (value, state, transaction) in
-                                state = value.translation
-                               })
-                               .onEnded({ (value) in
-                                self.snapViews(withTranslationHeight: -value.translation.height, geomoetry: geometry)
-                               })
-                    )
                 }
                 .background(Color(self.counterViewModel.palette.primary))
                 .blur(radius: self.blurRadius)

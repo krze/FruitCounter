@@ -15,10 +15,10 @@ struct RatingButtons: View {
     var body: some View {
         HStack(spacing: 20) {
             Button(action: { self.rating = .thumbsDown }) {
-                Text(Rating.thumbsDown.emoji).font(viewModel.thumbsDownFont)
+                Text(Rating.thumbsDown.emoji).font(viewModel.font).opacity(viewModel.thumbsDownOpacity)
             }
             Button(action: { self.rating = .thumbsUp }) {
-                Text(Rating.thumbsUp.emoji).font(viewModel.thumbsUpFont)
+                Text(Rating.thumbsUp.emoji).font(viewModel.font).opacity(viewModel.thumbsUpOpacity)
             }
         }.animation(.easeInOut)
     }
