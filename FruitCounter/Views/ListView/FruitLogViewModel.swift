@@ -25,4 +25,8 @@ final class FruitLogViewModel: ObservableObject {
         logCoordinator.replace(oldLog: fruitLog, with: newLog)
         fruitLog = newLog
     }
+    
+    func remove(fruitLog: FruitLog) {
+        logCoordinator.remove(fruitLog)
+    }
 }

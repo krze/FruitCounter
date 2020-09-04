@@ -18,8 +18,6 @@ struct FruitLogListView: View {
         List {
             ForEach(viewModel.latestLogs(), id: \.hashValue) { fruitLog in
                 FruitLogView(viewModel: self.viewModel.fruitLogViewModel(from: fruitLog), presentDetail: self.$presentDetail)
-            }.onDelete { indexSet in
-                self.viewModel.remove(at: indexSet)
             }
         }
         .cornerRadius(30.0)

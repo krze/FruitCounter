@@ -13,7 +13,10 @@ struct DetailView: View {
     @ObservedObject var fruitLogViewModel: FruitLogViewModel
     @ObservedObject var mutableFruitLog: MutableFruitLog
     
+    let deletionCallback: () -> Void
+    
     @State private var showDatePicker = false
+    @State private var shouldSave = true
     
     var body: some View {
         VStack {
@@ -26,13 +29,21 @@ struct DetailView: View {
             Text(fruitLogViewModel.fruitLog.fruit.emoji).font(.appFont(size: 69))
             Text(fruitLogViewModel.fruitLog.fruit.name)
             RatingButtons(rating: $mutableFruitLog.rating, viewModel: RatingsButtonViewModel(currentRating: mutableFruitLog.rating))
+            Button("🗑", action: remove).font(.appFont(size: 69))
         }
         .font(fruitLogViewModel.font).animation(.easeInOut)
         .onDisappear {
-            self.fruitLogViewModel.update(with: self.mutableFruitLog.makeFruitLog())
+            if self.shouldSave {
+                self.fruitLogViewModel.update(with: self.mutableFruitLog.makeFruitLog())
+            }
         }
     }
     
+    private func remove() {
+        fruitLogViewModel.remove(fruitLog: fruitLogViewModel.fruitLog)
+        shouldSave = false
+        deletionCallback()
+    }
 }
 
 struct DetailView_Previews: PreviewProvider {
@@ -43,6 +54,6 @@ struct DetailView_Previews: PreviewProvider {
         let dataCoordinator = DataCoordinator()
         let logCoordinator = LogCoordinator(logBook: logBook, dataCoordinator: dataCoordinator)
         let viewModel = FruitLogViewModel(fruitLog: fruitLog, font: .appFont(size: 24), logCooordinator: logCoordinator)
-        return DetailView(fruitLogViewModel: viewModel, mutableFruitLog: fruitLog.getMutableFruitLog())
+        return DetailView(fruitLogViewModel: viewModel, mutableFruitLog: fruitLog.getMutableFruitLog(), deletionCallback: {})
     }
 }

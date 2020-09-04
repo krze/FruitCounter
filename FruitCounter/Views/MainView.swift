@@ -80,7 +80,7 @@ struct MainView: View {
                                 }
                         }
                         
-                        DetailView(fruitLogViewModel: self.presentDetail!, mutableFruitLog: self.presentDetail!.fruitLog.getMutableFruitLog())
+                        DetailView(fruitLogViewModel: self.presentDetail!, mutableFruitLog: self.presentDetail!.fruitLog.getMutableFruitLog(), deletionCallback: self.dismissDetail)
                             .padding(25)
                             .background(Color(self.counterViewModel.palette.primary))
                             .cornerRadius(10)
@@ -113,6 +113,11 @@ struct MainView: View {
             bottomViewHeight = geomoetry.size.height * maxBottomViewRatio
             topViewHeight = geomoetry.size.height * maxTopViewRatio
         }
+    }
+    
+    private func dismissDetail() {
+        self.presentDetail = nil
+        self.blurRadius = 0
     }
     
     private enum Direction {
